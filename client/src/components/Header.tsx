@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useLanguage } from '@/hooks/useLanguage';
+import hdtLogo from '@assets/Thiết kế chưa có tên_1753485335802.png';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,9 +24,11 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo Section */}
           <Link href="/" className="flex items-center space-x-3" data-testid="logo-link">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
-              <i className="fas fa-brain text-white text-lg"></i>
-            </div>
+            <img 
+              src={hdtLogo} 
+              alt="HDT AI Logo" 
+              className="w-10 h-10 rounded-lg object-contain"
+            />
             <span className="text-xl font-bold text-slate-900">HDT AI</span>
           </Link>
 

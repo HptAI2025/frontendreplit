@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { useLanguage } from '@/hooks/useLanguage';
+import hdtLogo from '@assets/Thiết kế chưa có tên_1753485335802.png';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -11,9 +12,11 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
-                <i className="fas fa-brain text-white text-lg"></i>
-              </div>
+              <img 
+                src={hdtLogo} 
+                alt="HDT AI Logo" 
+                className="w-10 h-10 rounded-lg object-contain"
+              />
               <span className="text-2xl font-bold">HDT AI</span>
             </div>
             <p className="text-slate-300 mb-6 max-w-md">
